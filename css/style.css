@@ -1,0 +1,279 @@
+/*
+* Default
+***********************************/
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(234,234,234);
+	font-family: arial;
+}
+
+.clear {
+	clear: both;
+	float: none !important;
+	height: 0 !important;
+	padding: 0 !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+input[type=checkbox] + label,
+input[type=checkbox] + label:active, input[type=checkbox]:checked + label:active {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	position: relative;
+	margin: 0.35em 0;
+	padding: 0;
+	cursor: pointer;
+	border: 1px solid rgb(128,128,128);
+	width: 0.4em;
+	height: 0.45em;
+}
+
+input[type=checkbox]:checked + label {
+	content: '✔2714';
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+input[type=checkbox]:checked + label:after {
+	padding: 0;
+	content: '\2714';
+	font-size: 0.8em;
+	position: absolute;
+	top: 0.1em;
+	line-height: 0;
+	color: #777;
+}
+
+section.box-tarefas article ul li *::-moz-selection {
+	background: transparent;
+}
+
+section.box-tarefas article ul li *::selection {
+    background: transparent;
+    -webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	-ms-text-shadow: none;
+	-o-text-shadow: none;
+	text-shadow: none;
+}
+
+#container-tarefa {
+	display: none;
+}
+
+/*
+* Estrutura
+***********************************/
+section.box-tarefas {
+	margin: 0 auto;
+	width: 40em;
+}
+
+section.box-tarefas h1 {
+	text-align: center;
+	font-size: 5em;
+	margin: 0.15em 0 0.15em;
+	color: rgb(207,207,207);
+	text-shadow: rgba(141,137,137,0.5) -1px 0, rgba(141,137,137,0.3) 0 0, rgba(141,137,137,0.5) 0 1px, rgba(141,137,137,0.3) -1px -1px;
+}
+
+section.box-tarefas article {
+	margin: 0;
+	-webkit-box-shadow: 0px 0px 10px rgb(153,153,153);
+	-moz-box-shadow: 0px 0px 10px rgb(153,153,153);
+	box-shadow: 0px 0px 10px rgb(153,153,153);
+	border-width: 1em 0 0 0;
+	border-style: solid;
+	border-color: rgb(154,138,131);
+	border-image: -webkit-linear-gradient(rgb(145,129,122), rgb(154,138,131)) 25%;
+	border-image: -moz-linear-gradient(rgb(145,129,122), rgb(154,138,131)) 25%;
+	border-image: linear-gradient(rgb(145,129,122), rgb(154,138,131)) 25%;
+}
+
+section.box-tarefas article ul {
+	display: table;
+	background: rgb(255,255,255);
+	font-size: 1.6em;
+	border: 1px solid rgb(178,178,178);
+	border-top: 1px solid #555;
+	width: 100%;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section.box-tarefas article ul li {
+	display: table;
+	width: 100%;
+}
+
+section.box-tarefas article ul li:first-child {
+	background-color: rgb(242,242,242);
+}
+
+section.box-tarefas article ul li:first-child .linha label {
+	font-style: italic;
+	color: rgb(169,169,176);
+}
+
+#adicionar {
+	cursor: pointer;
+}
+
+section.box-tarefas article ul li + li {
+	border-top: 1px dotted #999;
+}
+
+section.box-tarefas article ul li > div {
+	float: left;
+	display: inline-block;
+	height: 100%;
+}
+
+section.box-tarefas article ul li > div:first-child {
+	padding: 0.6em;
+}
+
+section.box-tarefas article ul li .linha {
+	display: block;
+	width: 20em;
+	padding-left: 0.08em;
+	border-left: 1px solid rgb(245,214,214);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section.box-tarefas article ul li .linha label {
+	display: block;
+	word-wrap: break-word;
+	padding: 0.6em;
+	border-left: 1px solid rgb(245,214,214);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section.box-tarefas article ul li .linha label a {
+	color: rgb(77,77,77);
+}
+
+section.box-tarefas article .remover {
+	display: inline;
+	float: right;
+	padding: 0.4em 0.75em;
+	cursor: pointer;
+}
+
+section.box-tarefas article .remover:before {
+	content: '\00d7';
+	font-weight: bolder;
+	font-size: 1.1em;
+	color: rgb(168,138,138);
+	font-family: 'Arial Black', sans-serif;
+}
+
+section.box-tarefas footer > div {
+	background: rgb(237,237,237);
+}
+
+
+section.box-tarefas footer > div:first-child {
+	margin: 0 0.3em;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: rgb(178,178,178);
+	height: 0.2em;
+	background-color: rgb(231,231,231);
+
+	-webkit-box-shadow: 0px 0px 2px rgb(153,153,153);
+	-moz-box-shadow: 0px 0px 2px rgb(153,153,153);
+	box-shadow: 0px 0px 2px rgb(153,153,153);
+}
+
+section.box-tarefas footer .filtro {
+	position: relative;
+	margin: 0 0.6em;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: rgb(178,178,178);
+	background-color: rgb(231,231,231);
+
+	-webkit-box-shadow: 0px 0px 2px rgb(153,153,153);
+	-moz-box-shadow: 0px 0px 2px rgb(153,153,153);
+	box-shadow: 0px 0px 2px rgb(153,153,153);
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section.box-tarefas footer .filtro > div {
+	width: 33.3%;
+	float: left;
+}
+
+section.box-tarefas footer .filtro > div > * {
+	display: table;
+	margin: 0.3em 0.5em;
+}
+
+section.box-tarefas footer .filtro * {
+	color: #83756F;
+	font-size: 0.95em;
+}
+
+section.box-tarefas footer .filtro button {
+	float: right;
+	background-color: #D4D4D4;
+
+	-webkit-box-shadow: inset 0px 1px 0px 1px #BFBFBF;
+	-moz-box-shadow: inset 0px 1px 0px 1px #BFBFBF;
+	box-shadow: inset 0px 1px 0px 1px #BFBFBF;
+	border-radius: 3px;
+	border: none;
+	color: #828486;
+	margin: 0.4em;
+	padding: 0.3em 0.9em;
+	font-size: 0.7em;
+	cursor: pointer;
+}
+
+section.box-tarefas > p {
+	margin: 2.5em 0;
+	text-align: center;
+	color: #999;
+	text-shadow: 0.1em 0.1em white;
+	font-size: 0.8em;
+}

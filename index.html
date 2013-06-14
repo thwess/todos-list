@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>	
+		<meta charset="UTF-8">
+		<title>Todo list - tasks control</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-grey@2x.png" alt="Fork me on GitHub"></a>
+
+		<section class="box-tarefas">
+			<h1>todos</h1>
+
+			<article>
+				<form name="lista-tarefas" action="/" method="post">
+					<fieldset>
+						<ul>
+							<li>
+								<div>
+									<input type="checkbox" class="tasks" name="marcar-todos" />
+								</div>
+								<div class="linha">
+									<label id="adicionar">What needs to be done?</label>
+								</div>
+							</li>
+							<li>
+								<div>
+									<input type="checkbox" class="task" name="" />
+								</div>
+								<div class="linha">
+									<label><a contenteditable="false" href="javascript:void(0)">Task example</a></label>
+								</div>
+								<div class="remover"></div>
+							</li>
+						</ul>
+					</fieldset>
+				</form>
+			</article>
+			<footer>
+				<div></div>
+				<div class="filtro">
+					<div>
+						<span>
+							<strong id="itens-left">2</strong>
+							items left
+						</span>
+					</div>
+					<div>
+						<a id="remove-completos" href="javascript:void(0)">
+							<strong>All</strong> Active Completed
+						</a>
+					</div>
+					<div>
+						<button id="reseta-itens">
+							Clear completed (<span id="itens-completos">0</span>)
+						</button>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</footer>
+
+			<p>Double-click to edit a todo</p>
+		</section> <!-- lista-tarefas -->
+
+		<div id="container-tarefa">
+			<li>
+				<div>
+					<input type="checkbox" class="task" name="" />
+				</div>
+				<div class="linha">
+					<label><a contenteditable="false" href="javascript:void(0)">New Task</a></label>
+				</div>
+				<div class="remover"></div>
+			</li>
+		</div>
+
+		<script type="text/javascript" src="js/core.js"></script>
+	</body>
+</html>
